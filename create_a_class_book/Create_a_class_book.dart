@@ -3,16 +3,16 @@ class Book {
   String title;
   String author;
   int publicationYear;
-  int pagesRead;
+  int pagesRead = 0;
 
   static int totalBooks = 0;
 
-  Book(this.title, this.author, this.publicationYear, this.pagesRead) {
+  Book(this.title, this.author, this.publicationYear) {
     totalBooks++;
   }
 
   void read(int pages) {
-    pagesRead = pagesRead-pages;
+    pagesRead += pages;
   }
 
   int getPagesRead() {
@@ -22,6 +22,7 @@ class Book {
   String getTitle() {
     return title;
   }
+
 
   String getAuthor() {
     return author;
